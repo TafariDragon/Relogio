@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:theme="@style/ThemeOverlay.Relogio.FullscreenContainer"
+    tools:context=".FullscreenActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/btnConfig"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/definicoes"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:clickable="true">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txtNivelBateria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nivel de Bateria"
+            android:textSize="20sp"
+            android:gravity="end"
+            android:layout_marginRight="26dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold">
+
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:gravity="center"
+        >
+        <TextClock
+            android:id="@+id/clock_hora_minutos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="100sp"
+            android:format12Hour="hh:mm"
+            android:format24Hour="hh:mm">
+        </TextClock>
+
+        <TextClock
+            android:id="@+id/clock_segundos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00"
+            android:textSize="30sp"
+            android:layout_marginTop="20dp"
+            android:format12Hour="ss"
+            android:format24Hour="ss">
+        </TextClock>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_blue_900"
+        android:orientation="horizontal"
+        android:gravity="bottom">
+
+        <CheckBox
+            android:id="@+id/checkBoox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"></CheckBox>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nivel de Bateria"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textStyle="italic|bold"></TextView>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/btnExit"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/remover"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="15dp"
+                android:focusable="true"
+                android:clickable="true"></ImageView>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
